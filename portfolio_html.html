@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juliet Wahu Muiruri - Business Intelligence Data Analyst</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid white;
+            margin: 0 auto 25px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: block;
+        }
+        
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 50px 40px;
+        }
+        
+        .section {
+            margin-bottom: 55px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .about-text {
+            font-size: 1.15em;
+            color: #444;
+            line-height: 1.9;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .experience-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 1.05em;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 0.95em;
+        }
+        
+        .skill-tag:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .project-card {
+            background: #fff;
+            border: 2px solid #e9ecef;
+            border-left: 6px solid #667eea;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-left-color: #764ba2;
+        }
+        
+        .project-card h3 {
+            color: #667eea;
+            font-size: 1.6em;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .project-card .tools {
+            color: #764ba2;
+            font-weight: 700;
+            margin: 12px 0;
+            font-size: 1.05em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .project-card .tools::before {
+            content: "🛠️";
+            font-size: 1.2em;
+        }
+        
+        .project-card .problem {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .project-card .result {
+            background: #f0f7ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            margin-top: 15px;
+            font-size: 1.05em;
+        }
+        
+        .result-label {
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .tools-built-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .tool-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid #dee2e6;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+        
+        .tool-card h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .tool-card p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 1em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .tool-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .screenshot-img {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #dee2e6;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+        
+        .contact h2 {
+            color: white;
+            border: none;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+        
+        .contact-info {
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 2px;
+        }
+        
+        .contact-info a:hover {
+            opacity: 0.8;
+            border-bottom-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="juliet_photo.jpg" alt="Juliet Wahu Muiruri" class="profile-photo">
+            <h1>Juliet Wahu Muiruri</h1>
+            <p>Business Intelligence Data Analyst</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>About Me</h2>
+                <p class="about-text">
+                    I am a Business Intelligence–focused Data Analyst with hands-on experience transforming operational, financial, and compliance data into actionable insights. I work closely with stakeholders to understand business questions, analyze data from multiple sources, and deliver clear reports and dashboards that support decision-making. My strength lies in bridging business needs with data—structuring information, identifying trends, and presenting insights in a way that drives performance improvement.
+                </p>
+                <div class="experience-badge">4+ Years of Data Analysis Experience</div>
+            </div>
+            
+            <div class="section">
+                <h2>Core Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-tag">Power BI Dashboards</div>
+                    <div class="skill-tag">Excel (Advanced)</div>
+                    <div class="skill-tag">KPI Design & Tracking</div>
+                    <div class="skill-tag">Data Analysis & Interpretation</div>
+                    <div class="skill-tag">Data Cleaning & Validation</div>
+                    <div class="skill-tag">Financial Analysis</div>
+                    <div class="skill-tag">Compliance Reporting</div>
+                    <div class="skill-tag">Stakeholder Communication</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Featured Projects</h2>
+                
+                <div class="project-card">
+                    <h3>Business Performance & KPI Analytics</h3>
+                    <p class="tools">Power BI • Excel (Advanced Formulas & Pivot Tables)</p>
+                    <p class="problem">
+                        Analyzed operational and financial KPIs across multiple business functions to track performance against targets and identify trends, variances, and root causes of underperformance.
+                    </p>
+                    <div class="result">
+                        <div class="result-label">Impact:</div>
+                        Delivered automated dashboards and structured reports that improved visibility of performance metrics and supported data-driven management decisions.
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Cost, Budget & Variance Analysis</h3>
+                    <p class="tools">Power BI • Excel</p>
+                    <p class="problem">
+                        Conducted budget vs. actual and trend analysis for CAPEX and OPEX data to identify cost drivers, inefficiencies, and savings opportunities.
+                    </p>
+                    <div class="result">
+                        <div class="result-label">Impact:</div>
+                        Provided insights that supported cost optimization, improved forecasting accuracy, and strengthened financial planning and reporting.
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Compliance & Quality Data Analytics</h3>
+                    <p class="tools">Power BI • Excel</p>
+                    <p class="problem">
+                        Analyzed compliance, quality, and process-control data (including water treatment and production standards) to monitor adherence to internal and regulatory benchmarks.
+                    </p>
+                    <div class="result">
+                        <div class="result-label">Impact:</div>
+                        Enabled early detection of non-compliance trends and supported corrective actions through standardized, data-backed reporting.
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Project & Delivery Analytics Dashboards</h3>
+                    <p class="tools">Power BI • Excel</p>
+                    <p class="problem">
+                        Built analytics dashboards to track project timelines, costs, risks, and deliverables across multiple initiatives, consolidating data from different sources.
+                    </p>
+                    <div class="result">
+                        <div class="result-label">Impact:</div>
+                        Improved project transparency, strengthened stakeholder reporting, and supported proactive risk and performance management.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Power BI Dashboards & Tools Built</h2>
+                
+                <div class="tools-built-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">📊</div>
+                        <h3>BTD Analytics Dashboard</h3>
+                        <p>Business-to-date performance tracking dashboard with real-time KPI monitoring and trend analysis.</p>
+                        <img src="powerbi-screenshot.png" alt="Power BI BTD Dashboard" class="screenshot-img">
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">📈</div>
+                        <h3>OT Report Dashboard</h3>
+                        <p>Interactive overtime tracking and analysis dashboard for workforce management and cost control.</p>
+                        <img src="powerbi-screenshot (2).png" alt="Power BI OT Report Dashboard" class="screenshot-img">
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">🌱</div>
+                        <h3>Sustainability Metrics Dashboard</h3>
+                        <p>Environmental and sustainability KPI tracking system for compliance and performance reporting.</p>
+                        <img src="Power BI Sustainability.png" alt="Power BI Sustainability Dashboard" class="screenshot-img">
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">🧮</div>
+                        <h3>Business Calculator</h3>
+                        <p>Custom calculation tool for automated business analysis and decision support.</p>
+                        <img src="calculator-screenshot.png" alt="Business Calculator" class="screenshot-img">
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">💼</div>
+                        <h3>Projects Portfolio</h3>
+                        <p>Comprehensive portfolio framework showcasing analytical capabilities and deliverables.</p>
+                        <img src="portfolio-screenshot.png" alt="Projects Portfolio" class="screenshot-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact">
+            <h2>Let's Connect</h2>
+            <div class="contact-info">📧 Email: wahumuiruri1@gmail.com</div>
+            <div class="contact-info">💼 LinkedIn: <a href="https://www.linkedin.com/in/juliet-muiruri-9219121a9">linkedin.com/in/juliet-muiruri-9219121a9</a></div>
+            <div class="contact-info">📱 Phone: 0716246223</div>
+        </div>
+    </div>
+</body>
+</html>
